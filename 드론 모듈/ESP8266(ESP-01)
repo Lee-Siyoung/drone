@@ -1,0 +1,77 @@
+## 와이파이통신 ESP8266(ESP-01) WiFi 모듈
+
+
+- 전체 TCP / IP 스택 및 마이크로 컨트롤러 기능을 갖춘 저가의 즉시 사용 가능한 Wi-Fi 통신 모듈
+- 모든 Pixhawk 시리즈 컨트롤러와 함께 사용할 수 있음
+- UART 포트로 통신 가능
+- MAVLink 프로토콜 지원 -> MavESP8266
+
+통신 방식
+802.11b/g/n 지원
+구동 전압(Operating voltage)
+3.0V ~ 3.6V
+크기 (Size)
+14.5 x 24.8mm
+Power(Typical Values)
+Average: ~71mA, Peak: 300mA 
+(Continuous Transmission
+Power(절전 모드)
+Min.20uA
+Interface
+UART/GPIO 지원
+동작 명령어
+UART AT command
+안테나 구성(Antenna configuration)
+On-boad ceramic antenna
+플래쉬 메모리(Flash memory)
+16M Byte
+UART 전송 속도
+9600bps
+SPI Flash
+8Mbit Default
+Frequency Range
+2412 ~ 2484MHz
+프로세서 속도 (Processor speed)
+80 ~ 160MHz
+Operating Temperature
+~ 
+Storage Environment
+~ , 
+
+
+
+
+
+
+
+
+
+
+
+
+MavESP8266
+https://github.com/dogmaphobic/mavesp8266
+- 디버깅을 위한 보조 UART를 편리하게 제공하기 위해 사용
+- 921600 보드에서 안정적
+- 빌드 환경은 platformio를 기반
+- MavESP8266 펌웨어에서 지원하는 Mavlink 매개 변수 및 메시지
+https://github.com/dogmaphobic/mavesp8266/blob/master/PARAMETERS.md
+- 자체 매개 변수 및 명령 세트 처리
+
+Pixhawk / PX4 설정 및 구성
+https://ardupilot.org/copter/docs/common-esp8266-telemetry.html
+
+- Serial1 / Telem1에 연결된 경우 이러한 매개 변수는 자동 조종 장치에 설정
+- SERIAL1_PROTOCOL = 2 (MAVLink2) 또는 1 (MAVLink1)
+- SERIAL1_BAUD = 921 (921600 보드)
+- MAVESP8266 펌웨어로 장치 플래싱
+
+- NodeMCU 플래셔를 이용해 펌웨어 적용
+- Wi-Fi SSID 및 비밀번호 변경
+
+ESP8266을 통해 QGC에 연결
+https://docs.px4.io/master/ko/telemetry/esp8266_wifi_module.html
+- Wi-Fi가 활성화 된 QGroundControl 지상국 컴퓨터/태블릿에서 ESP8266 용 개방형 무선 네트워크를 찾아 연결
+- Windows 컴퓨터에서 네트워크 이름은 Pixracer이고 기본 암호는 pixracer point
+- QGC는 부팅시 UDP 링크를 자동으로 시작. QGroundControl은 지상국 컴퓨터가 Pixracer라는 이름의 WiFi 액세스 포인트에 연결되면 자동으로 연결
+- 무선 링크를 통해 QGC 컴퓨터에서 HUD 움직임을 확인하고 ESP8266 WiFi 브리지에 대한 요약 패널을 볼 수 있음
