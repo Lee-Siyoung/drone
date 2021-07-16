@@ -97,9 +97,9 @@ https://www.youtube.com/watch?v=NM6lrxy0bxs
 Jetson Nano는 성능이 좋지 않기 때문에 fast-rcnn모델은 Jetson Nano에 비해 매우 크다. 그리고 모델 자체가 복잡하기 때문에 tensorRT같은 nvidia에서 제공하는 딥러닝 SDK에서 즉시 작동하지 않는다. 지원되지 않는 노드가 많이 있어 fast-rcnn을 쓸려면 많은 사전처리가 필요하다. 그에 반에 yolo는 nvidia에서 공식 tensorRT yolo샘플이 있기 때문에 Jetson Nano에서 적용하기 쉽다. 그렇기 때문에 적용하기 쉬운 yolo를 써야한다.
 
 #### 3.
-Jetson Nano에서 실제 yolo를 돌리면 5~10fps정도가 나온다.
+Jetson Nano에서 실제 yolo를 돌리면 5 ~ 10fps정도가 나온다.
 ex) https://www.youtube.com/watch?v=keuYwbkZz7c
-그리고 fps를 더 높이고 싶다면 nvidia에서 제공하는 DeepStream 딥러닝 SDK를 이용해 20~25fps까지 높일 수 있다.
+그리고 fps를 더 높이고 싶다면 nvidia에서 제공하는 DeepStream 딥러닝 SDK를 이용해 20 ~ 25fps까지 높일 수 있다.
 https://forums.developer.nvidia.com/t/deepstream-gst-nvstreammux-change-width-and-height-doesnt-affect-fps/83286#5392823
 그리고 yolo에는 다른 모델들과 달리 yolo-tiny라고 경량화를 시킨 모델이 있다. yolo-tiny를 쓰면 fps가 10정도 더 늘어나게 할 수 있다,
 ex) https://www.youtube.com/watch?v=7icaFX8qetE
