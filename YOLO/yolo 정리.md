@@ -87,6 +87,7 @@ yolo는 이미지를 일정 크기의 그리드로 자른 뒤 학습하기 때�
 <기존의 객체 탐지 모델과의 속도 비교>
 
 https://www.youtube.com/watch?v=NM6lrxy0bxs
+
 1분59초 ~ 2분40초 부분을 보면 0.5FPS – 6FPS – 30FPS순으로 프레임에 따른 감지 속도를 보여주고 있다. 만약 faster R-CNN이나 faster R-CNN을 쓴다면 순식간에 움직이는 동물들을 추적하는데 어려움이 따를 수 있기 때문에 yolo은 필수적이라 생각한다.
 
 고라니 속도 https://www.youtube.com/watch?v=ZxgHYYgBQhQ
@@ -98,9 +99,15 @@ Jetson Nano는 성능이 좋지 않기 때문에 fast-rcnn모델은 Jetson Nano�
 
 #### 3.
 Jetson Nano에서 실제 yolo를 돌리면 5 ~ 10fps정도가 나온다.
+
 ex) https://www.youtube.com/watch?v=keuYwbkZz7c
+
 그리고 fps를 더 높이고 싶다면 nvidia에서 제공하는 DeepStream 딥러닝 SDK를 이용해 20 ~ 25fps까지 높일 수 있다.
+
 https://forums.developer.nvidia.com/t/deepstream-gst-nvstreammux-change-width-and-height-doesnt-affect-fps/83286#5392823
-그리고 yolo에는 다른 모델들과 달리 yolo-tiny라고 경량화를 시킨 모델이 있다. yolo-tiny를 쓰면 fps가 10정도 더 늘어나게 할 수 있다,
+
+그리고 yolo에는 다른 모델들과 달리 yolo-tiny라고 경량화를 시킨 모델이 있다. yolo-tiny를 쓰면 fps가 10정도 더 늘어나게 할 수 있다.
+
 ex) https://www.youtube.com/watch?v=7icaFX8qetE
+
 다른 모델들은 yolo와 달리 경량화 모델이 없기 때문에 드론에서 실시간으로 처리한다면 드론에 가하는 부담이 커진다. 그에 반에 yolo-tiny는 용량도 작고 가볍기 때문에 실시간으로 드론에서 처리하는데 좋기 때문에 yolo를 써야한다.
