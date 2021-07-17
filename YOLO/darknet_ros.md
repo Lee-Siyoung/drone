@@ -66,5 +66,4 @@ roslaunch darknet_ros darknet_ros.launch
 
 ![image](https://user-images.githubusercontent.com/57993534/126032571-7ec6ab7b-c19a-4024-9557-1bd91b4749ef.png)
 
-
-
+(출처 : https://ropiens.tistory.com/67?category=905965)
