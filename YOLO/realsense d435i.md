@@ -20,3 +20,4 @@ sudo apt-get install ros-$$ROS_VER-realsense2-camera
 # realsense-viewer 실행
 realsense-viewer
 ```
+![image](https://user-images.githubusercontent.com/57993534/126031747-b559841f-9fce-4836-891d-5849c0288a3d.png)
